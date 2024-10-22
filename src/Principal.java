@@ -12,7 +12,7 @@ public class Principal {
             Opcion opcionUsuario = new Opcion();
 
             System.out.println(opcionUsuario.getMenu());
-            System.out.println("Seleccione la opción que quieres : ");
+            System.out.println("Seleccione una opción : ");
 
             try {
                 opcion = lecturaTeclado.nextInt();
