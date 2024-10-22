@@ -7,22 +7,11 @@ public class Principal {
         int opcion = 0;
 
         Scanner lecturaTeclado = new Scanner(System.in);
-        String menu = """
-                \n
-                *****            CONVERSOR DE MONEDAS            *****
-                \n
-                - Tipo de monedas que podemos convertir.
-                \n
-                1 - COP (Peso Colombiano) - EUR (Euro).
-                2 - EUR (Euro) - COP (Peso Colombiano).
-                3 - COP (Peso Colombiano) - USD	(United States Dollar).
-                4 - USD	(United States Dollar) - COP (Peso Colombiano).
-                5 - EUR (Euro) - USD (United States Dollar).
-                6 - USD	(United States Dollar) - EUR (Euro).
-                9 - Salir.
-                """;
+
         while (opcion != 9) {
-            System.out.println(menu);
+            Opcion opcionUsuario = new Opcion();
+
+            System.out.println(opcionUsuario.getMenu());
             System.out.println("Seleccione la opción que desea : ");
 
             try {
@@ -33,7 +22,7 @@ public class Principal {
                 break;
             }
 
-            Opcion opcionUsuario = new Opcion();
+
             opcionUsuario.opcionUsuario(opcion);
 
             if (!Objects.equals(opcionUsuario.getTargetCode(), "")) {

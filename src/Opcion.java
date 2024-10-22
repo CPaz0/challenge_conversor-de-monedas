@@ -1,6 +1,23 @@
 public class Opcion {
     private String baseCode = "";
     private String targetCode = "";
+    private String menu = """
+                \n
+                *****            CONVERSOR DE MONEDAS            *****
+                \n
+                - Tipo de monedas que podemos convertir.
+                \n
+                1 - COP (Peso Colombiano) - EUR (Euro).
+                2 - EUR (Euro) - COP (Peso Colombiano).
+                3 - COP (Peso Colombiano) - USD	(United States Dollar).
+                4 - USD	(United States Dollar) - COP (Peso Colombiano).
+                5 - EUR (Euro) - USD (United States Dollar).
+                6 - USD	(United States Dollar) - EUR (Euro).
+                9 - Salir.
+                """;
+    public String getMenu() {
+        return menu;
+    }
 
     public String getBaseCode() {
         return baseCode;
